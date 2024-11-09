@@ -1,0 +1,623 @@
+<!doctype html>
+
+<html
+  lang="en"
+  class="light-style layout-menu-fixed layout-wide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-pat="/assets/"
+  data-template="vertical-menu-template-free"
+  data-style="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>BITNEX</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="/vendor/fonts/remixicon/remixicon.css" />
+
+    <!-- Menu waves for no-customizer fix -->
+    <link rel="stylesheet" href="/vendor/libs/node-waves/node-waves.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="/vendor/js/helpers.js"></script>
+    
+    <script src="/js/config.js"></script>
+    <style>
+    .five-depo-coren{
+    /* background-color: red; */
+    width: 95%;
+    margin-left: 20px;
+    margin-bottom: 230px;
+    margin-top: 100px;
+}
+  .five-depo-coren div{
+    cursor: pointer;
+    float: left;
+    width: 200px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    height: 70px;
+    margin-right: 2%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+  .five-depo-coren div img{
+    width: 50px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px -5px;
+    background-color: lightgray;
+}
+  .five-depo-coren div #main-a{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 70px;
+    margin-top: -50px;
+}
+  .five-depo-coren div #main-a span{
+    font-size: 11px;
+    font-weight: 400;
+}
+  .five-depo-coren div #add{
+    margin-left: 70px;
+    font-size: 11px;
+    font-weight: 600;
+    color: red;
+}
+  .five-depo-coren div section{
+    background-color: lightgrey;
+    margin-left: 130px;
+    margin-top: -19px;
+    width: 30%;
+    height: 25px;
+    font-size: 70%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+  .five-depo-coren div section p{
+    /* transform: translateY(5px); */
+    margin-top: 1px;
+    padding-top: 5px;
+    color: var(--white);
+}
+    </style>
+  </head>
+
+  <body >
+    <!-- Layout wrapper -->
+
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-dark">
+          <div class="app-brand demo">
+            <a href="" class="app-brand-link">
+              <span class="app-brand-logo demo me-1">
+                <span style="color: var(--bs-primary)">
+                  <!-- adain logo goes here -->
+                </span>
+              </span>
+              <span class="app-brand-text text-white demo menu-text fw-semibold ms-2 p-4 m-4">BITNEX</span>
+            </a>
+
+          
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1 ">
+            <!-- Dashboards -->
+            <li class="menu-item active open">
+              
+              <ul class="menu-sub">
+                
+                <li class="menu-item ">
+                  <a href="https://bitnex-crypto.vercel.app/api/users/dashboard/<%= user.id %>" class="menu-link">
+                    <div data-i18n="Analytics" class="text-white">Dashboards</div>
+                  </a>
+                </li>
+                
+               
+                
+              </ul>
+            </li>
+
+
+            <li class="menu-item active open">
+              
+              <ul class="menu-sub">
+                
+                <li class="menu-item active">
+                  <a href="https://bitnex-crypto.vercel.app/api/users/payments/<%= user.id  %>" class="menu-link">
+                    <div data-i18n="Analytics" class="text-white">Payments</div>
+                  </a>
+                </li>
+                
+               
+                
+              </ul>
+            </li>
+
+
+            <li class="menu-item active open">
+              
+              <ul class="menu-sub">
+                
+                <li class="menu-item ">
+                  <a href="https://bitnex-crypto.vercel.app/api/users/plans/<%= user.id  %>" class="menu-link">
+                    <div data-i18n="Analytics" class="text-white">Plans</div>
+                  </a>
+                </li>
+                
+               
+                
+              </ul>
+            </li>
+
+
+
+            <li class="menu-item active open">
+              
+              <ul class="menu-sub">
+                
+                <li class="menu-item ">
+                  <a href="https://bitnex-crypto.vercel.app/api/users/payments/<%= user.id  %>" class="menu-link">
+                    <div data-i18n="Analytics" class="text-white">All Transactions</div>
+                  </a>
+                </li>
+                
+               
+                
+              </ul>
+            </li>
+
+
+            
+
+
+
+            <li class="menu-item active open">
+              
+              <ul class="menu-sub">
+                
+                <li class="menu-item  ">
+                  <a href=" https://bitnex-crypto.vercel.app/api/users/referred/<%= user.id %>" class="menu-link">
+                    <div data-i18n="Analytics" class="text-white">Referall</div>
+                  </a>
+                </li>
+                
+               
+                
+              </ul>
+            </li>
+            
+
+            
+
+            <!-- Layouts -->
+            
+
+            <!-- Front Pages -->
+            
+
+            
+            <!-- Pages -->
+            <!-- <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ri-layout-left-line"></i>
+                <div data-i18n="Account Settings" class="text-white">Account Settings</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="/settings-account" class="menu-link">
+                    <div data-i18n="Account">Account</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="pages-account-settings-notifications.html" class="menu-link">
+                    <div data-i18n="Notifications">Notifications</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="pages-account-settings-connections.html" class="menu-link">
+                    <div data-i18n="Connections">Connections</div>
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+            
+            
+            <!-- Components -->
+           
+            
+
+           
+           
+          </ul>
+        </aside>
+        <!-- / Menu -->
+       
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+          <nav class="layout-navbar container-fluid navbar navbar-expand-xl navbar-detached align-items-center " id="layout-navbar">
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
+                <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
+                    <i class="ri-menu-fill ri-24px"></i>
+                </a>
+            </div>
+        
+            <div class="navbar-nav-right d-flex align-items-center m-4" id="navbar-collapse">
+                <ul class="navbar-nav flex-row align-items-center ms-auto">
+        
+                    <!-- Notification -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-notification-2-line ri-24px"></i>
+                            <!-- <span class="badge bg-danger rounded-circle">3</span> Number of notifications -->
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
+                            <li>
+                                <h6 class="dropdown-header">Notifications</h6>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <i class="ri-alert-line ri-20px text-warning me-2"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <span>You have 3 new messages</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <i class="ri-check-line ri-20px text-success me-2"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <span>Your profile has been updated</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <i class="ri-settings-3-line ri-20px text-info me-2"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <span>Settings have been changed</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="dropdown-divider"></div>
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-center" href="#">
+                                    View all notifications
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- /Notification -->
+        
+                    <!-- User -->
+                    <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                        <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
+                            <div class="avatar avatar-online">
+                                <img src="<%= user.img %>" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0 me-2">
+                                            <div class="avatar avatar-online">
+                                                <img src="<%=  user.img %>" alt class="w-px-40 h-auto rounded-circle" />
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0 small"><%= user.fullname %></h6>
+                                            <small class="text-muted"><%= user.email %></small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="dropdown-divider"></div>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://bitnex-crypto.vercel.app/api/users/profile/<%= user.id %>">
+                                    <i class="ri-user-3-line ri-22px me-2"></i>
+                                    <span class="align-middle">My Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="ri-settings-4-line ri-22px me-2"></i>
+                                    <span class="align-middle">Settings</span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="dropdown-divider"></div>
+                            </li>
+                            <li>
+                                <div class="d-grid px-4 pt-2 pb-1">
+                                    <a class="btn btn-danger d-flex" href="https://bitnex-crypto.vercel.app/logout">
+                                        <small class="align-middle">Logout</small>
+                                        <i class="ri-logout-box-r-line ms-2 ri-16px"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- /User -->
+                </ul>
+            </div>
+        </nav>
+        
+
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+         
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-fluid flex-grow-1 container-p-y">
+
+
+              <!-- withdraw modal -->
+
+              <div class="modal fade" id="withdrawModalLabel" tabindex="-1" aria-labelledby="withdrawModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                   
+                   
+                    <div class="modal-content">
+                      
+                       
+  
+                        
+        
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="withdrawModalLabel">Withdraw</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+        
+                    
+                        <div class="modal-body">
+                            <form action="https://bitnex-crypto.vercel.app/api/payment/createInvoice" method="post" >
+                            <input type="text"  name="user_id" class="form-control"  value="<%= user.id %>" hidden>                             
+                            <input type="text"  name="order_id" class="form-control"  value="RDB-5467" hidden>
+                            <input type="text"  name="currency" class="form-control"  value="usd" hidden>
+  
+                            
+                                                   
+  
+                                <div class="mb-3">
+                                    <label for="amount" class="form-label">Amount</label>
+                                    <input type="number" name="amount" class="form-control" id="amount" >
+                                </div>
+  
+                                <div class="mb-3">
+                                  <label for="description" class="form-label">Description</label>
+                                  <input type="text"  name="description" class="form-control" id="description" >
+                              </div>
+  
+                              
+  
+                               
+  
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Pay</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+              <!-- end withdraw modal -->
+              
+        
+              <!-- Edit Profile Modal -->
+            <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                 
+                 
+                  <div class="modal-content">
+                    
+                     
+
+                      
+      
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="editProfileModalLabel">Deposite</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+      
+                  
+                      <div class="modal-body">
+                          <form action="https://bitnex-crypto.vercel.app/api/payment/createInvoice" method="post" >
+                          <input type="text"  name="user_id" class="form-control"  value="<%= user.id %>" hidden>                             
+                          <input type="text"  name="order_id" class="form-control"  value="RDB-5467" hidden>
+                          <input type="text"  name="currency" class="form-control"  value="usd" hidden>
+
+                          
+                                                 
+
+                              <div class="mb-3">
+                                  <label for="amount" class="form-label">Amount</label>
+                                  <input type="number" name="amount" class="form-control" id="amount" >
+                              </div>
+
+                              <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <input type="text"  name="description" class="form-control" id="description" >
+                            </div>
+
+                            
+
+                             
+
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                  <button type="submit" class="btn btn-primary">Pay</button>
+                              </div>
+                          </form>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+
+          <div class="row gy-6">
+
+
+            <div class="col-md-12 col-md-6 col-lg-4">
+              <div class="card">
+                <div class="card-body text-nowrap">
+                  <h5 class="card-title mb-0 flex-wrap text-nowrap">Commission Balance</h5>
+                  <h5 class="text-success mt-3">$<%= user.commissions %></h5>
+                  
+                  <!-- Withdrawal Button -->
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#withdrawModalLabel">Withdraw</button>
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+                  <div class="col-md-12 col-md-6 col-lg-4">
+
+                    <div class="card">
+  
+                      <div class="card-body text-nowrap">
+  
+                        <h5 class="card-title mb-0 flex-wrap text-nowrap">Available Balance</h5>
+  
+  
+                        <ul class="p-0 m-0">
+                                              
+                          <h5 class="text-success mt-3">$</h5>
+                        </ul>
+                      </div>
+                    </div>
+  
+                    </div>
+
+                  </div>
+
+
+
+                  
+
+
+
+                  <div data-aos="fade-up" class="five-depo-coren">
+                    <div class="btc">
+                        <img src="/images/bitcoin.jpeg" id="trade-img" alt="">
+                        <p id="main-a">00.00 <span>BTC</span></p>
+                        <p id="add">+20.39%</p>
+                        <section id="sec1">
+                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">+deposite</button>
+                        </section>
+                    </div>
+                    <div class="eth">
+                        <img src="/images/ethicon.jpeg" id="trade-imgg" alt="">
+                        <p id="main-a">00.00 <span>ETH</span></p>
+                        <p id="add">+25.59%</p>
+                        <section id="sec2">
+                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">+deposite</button>
+                        </section>
+                    </div>
+                   
+                   
+                    
+                </div>
+
+
+
+          </div>
+          <!-- Content wrapper -->
+        </div>
+
+       
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+    </div>
+    
+    </div>
+    <!-- / Layout wrapper -->
+    <div class="elfsight-app-10a6e36e-9ad4-4db2-b6b6-145e553c67e1" data-elfsight-app-lazy></div>
+
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+    <!-- Core JS -->
+    <!-- build:/vendor/js/core.js -->
+    <script src="/vendor/libs/jquery/jquery.js"></script>
+    <script src="/vendor/libs/popper/popper.js"></script>
+    <script src="/vendor/js/bootstrap.js"></script>
+    <script src="/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/vendor/js/menu.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="/js/main1.js"></script>
+
+    <!-- Page JS -->
+
+    <!-- Place this tag before closing body tag for github widget button. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
