@@ -1058,7 +1058,7 @@
                   try {
                       const token = localStorage.getItem('token');
                       console.log(token)
-                      const response = await fetch('https://bitnex-crypto.vercel.app/api/users/signupreferall', { // Adjust URL based on your route
+                      const response = await fetch('/api/users/signupreferall', { // Adjust URL based on your route
                           method: 'POST',
                           headers: {
                               'Content-Type': 'application/json',
@@ -1072,7 +1072,7 @@
                           document.getElementById('message').textContent = result.message;
                           document.getElementById('message').style.color = 'green';
                           // Optionally redirect to login page or another page
-                          window.location.href = `https://bitnex-crypto.vercel.app/api/users/dashboard/${result.user.id}`;
+                          window.location.href = `/api/users/dashboard/${result.user.id}`;
                           //localStorage.setItem('token', result.token)
       
                       } else {
