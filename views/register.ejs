@@ -183,8 +183,7 @@
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input id="phone" type="tel" name="phone" />
-                                        <label for="phone">Your Phone</label>
+                                        <input id="phone" type="tel" name="phone" class="form-control"/>
                                     </div>
                                 </div>
 
@@ -1044,6 +1043,13 @@
         <div class="elfsight-app-df0a836d-2a85-4ed4-bde2-1ad714b991c0" data-elfsight-app-lazy></div>
 
         <script>
+
+   const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+
 
             document.getElementById('signUpForm').addEventListener('submit', async function(event) {
                   event.preventDefault(); // Prevent the default form submission
