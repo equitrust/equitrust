@@ -78,7 +78,7 @@
                 <div class="row gx-0 align-items-center" style="height: 45px;">
                     <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                         <div class="d-flex flex-wrap">
-                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+15128893443</a>
                             <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>equitrustinvestmentgroup@gmail.com</a>
                         </div>
                     </div>
@@ -229,9 +229,9 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i>London, UK</a>
+                            <a href=""><i class="fa fa-map-marker-alt me-2"></i>Canada</a>
                             <a href=""><i class="fas fa-envelope me-2"></i> equitrustinvestmentgroup@gmail.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href=""><i class="fas fa-phone me-2"></i>+15128893443</a>
                             <div class="d-flex align-items-center">
                                 <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
@@ -335,7 +335,7 @@
             try {
                 const token = localStorage.getItem('token');
                 console.log(token)
-                const response = await fetch('/api/users/login', { // Adjust URL based on your route
+                const response = await fetch('http://localhost:6400/api/users/login', { // Adjust URL based on your route
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -349,7 +349,7 @@
                     document.getElementById('message').textContent = result.message;
                     document.getElementById('message').style.color = 'green';
                     // Optionally redirect to login page or another page
-                    window.location.href = `/api/users/dashboard/${result.user.id}`;
+                    window.location.href = `http://localhost:6400/api/users/dashboard/${result.user.id}`;
                     //localStorage.setItem('token', result.token)
 
                 } else {

@@ -16,7 +16,11 @@
         <!-- Icon Font Stylesheet -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+      />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
         <!-- Libraries Stylesheet -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link href="/lib/animate/animate.min.css" rel="stylesheet">
@@ -79,7 +83,7 @@
                 <div class="row gx-0 align-items-center" style="height: 45px;">
                     <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                         <div class="d-flex flex-wrap">
-                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+15128893443</a>
                             <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>equitrustinvestmentgroup@gmail.com</a>
                         </div>
                     </div>
@@ -179,7 +183,7 @@
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone">
+                                        <input id="phone" type="tel" name="phone" />
                                         <label for="phone">Your Phone</label>
                                     </div>
                                 </div>
@@ -979,9 +983,9 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i>London, UK</a>
+                            <a href=""><i class="fa fa-map-marker-alt me-2"></i>Canada</a>
                             <a href=""><i class="fas fa-envelope me-2"></i> equitrustinvestmentgroup@gmail.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href=""><i class="fas fa-phone me-2"></i>+15128893443</a>
                             <div class="d-flex align-items-center">
                                 <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
@@ -1053,7 +1057,7 @@
                   try {
                       const token = localStorage.getItem('token');
                       console.log(token)
-                      const response = await fetch('/api/users/register', { // Adjust URL based on your route
+                      const response = await fetch('http://localhost:6400/api/users/register', { // Adjust URL based on your route
                           method: 'POST',
                           headers: {
                               'Content-Type': 'application/json',
@@ -1067,7 +1071,7 @@
                           document.getElementById('message').textContent = result.message;
                           document.getElementById('message').style.color = 'green';
                           // Optionally redirect to login page or another page
-                          window.location.href = `/api/users/dashboard/${result.user.id}`;
+                          window.location.href = `http://localhost:6400/api/users/dashboard/${result.user.id}`;
                           //window.location.href = 'http://localhost:6400/api/users/popverify';
 
                           //localStorage.setItem('token', result.token)
